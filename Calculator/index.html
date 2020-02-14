@@ -1,0 +1,126 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <title>Title</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <style>
+        body{
+            background-color: rgb(13, 109, 165);
+        }
+        header h1{
+            font-weight: 900;
+            margin-top: 10vh;
+        }
+        #inputs span{
+            font-size: x-large;
+        }
+        #inputs{
+            margin-bottom: 5vh;
+        }
+        .operators button{
+            margin: 10px;
+            width: 100px;
+        }
+        nav button {
+            width: 100px;
+            background-color: orange;
+            color: blue;
+            border-radius: 10px;
+            margin: 10px;
+        }
+        nav button:hover{
+            background-color: blue;
+            color: orange;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <nav>
+            <a href="../index.html">
+                <button>Home</button>
+            </a>
+        </nav>
+        <div class="text-center">
+            <h1>CALCULATOR V1</h1>
+        </div>
+    </header>
+    <main>
+        <div class="container">
+            <div class="row d-flex justify-content-center mt-5">
+                <div id="inputs">
+                    <input type="number" id="nbr1">
+                    <input type="number" id="nbr2">
+                    <span> = </span>
+                    <input type="number" id="result">
+                </div>
+            </div>
+            <div class="row d-flex justify-content-center">
+                <div class="operators">
+                    <button id="add">+</button>
+                    <button id="sous">-</button>
+                    <button id="multi">x</button>
+                    <button id="divi">/</button>
+                </div>
+            </div>
+        </div>
+    </main>
+    <!-- Optional JavaScript -->
+    <script>
+        function addition(x, y){
+            return x+y;
+        };
+
+        function soustraction(x, y){
+            return x-y;
+        };
+
+        function multiplication(x, y){
+            return x * y;
+        };
+
+        function division(x, y){
+            return x/y;
+        };
+
+        var additionButton = document.getElementById("add");
+        var soustractionButton = document.getElementById("sous");
+        var multiplicationButton = document.getElementById("multi");
+        var divisionButton = document.getElementById("divi");
+        var result = document.getElementById("result");
+
+        additionButton.addEventListener("click", function(){
+            let nbr1 = parseFloat(document.getElementById("nbr1").value);
+            let nbr2 = parseFloat(document.getElementById("nbr2").value);
+            result.value = addition(nbr1, nbr2);
+        });
+
+        soustractionButton.addEventListener("click", function(){
+            let nbr1 = parseFloat(document.getElementById("nbr1").value);
+            let nbr2 = parseFloat(document.getElementById("nbr2").value);
+            result.value = soustraction(nbr1, nbr2);
+        });
+
+        multiplicationButton.addEventListener("click", function(){
+            let nbr1 = parseFloat(document.getElementById("nbr1").value);
+            let nbr2 = parseFloat(document.getElementById("nbr2").value);
+            result.value = multiplication(nbr1, nbr2);
+        });
+
+        divisionButton.addEventListener("click", function(){
+            let nbr1 = parseFloat(document.getElementById("nbr1").value);
+            let nbr2 = parseFloat(document.getElementById("nbr2").value);
+            result.value = division(nbr1, nbr2);
+        });
+    </script>
+</body>
+
+</html>
