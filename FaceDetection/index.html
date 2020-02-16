@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script defer src="./face-api.min.js"></script>
+    <script defer src="./app.js"></script>
+    <style>
+        body{
+            margin: 0;
+            padding: 0;
+            width: 100vw;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        canvas{
+            position: absolute;
+        }
+        header{
+            position: absolute;
+            z-index: 100;
+            top: 0;
+            left: 0;
+        }
+        nav button {
+            width: 100px;
+            background-color: orange;
+            color: blue;
+            border-radius: 10px;
+            margin: 10px;
+        }
+        nav button:hover{
+            background-color: blue;
+            color: orange;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="../index.html">
+                <button>Home</button>
+            </a>
+        </nav>
+        <div>
+            <h1>Face Detection</h1>
+        </div>
+    </header>
+    
+    <video id="video" width="720" height="560" autoplay muted></video>
+</body>
+</html>
